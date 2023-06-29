@@ -1,0 +1,34 @@
+.form-error {
+	min-height: 3.5rem;
+	width: 100%;
+	display: none;
+	margin-top: .5rem;
+	padding: 1rem;
+	background-color: rgb(226, 42, 50);
+	color: #fff;
+	text-align: center;
+	line-height: 1.2;
+	font-size: 1.1rem;
+	border-radius: .4rem;
+	pointer-events: none;
+
+	&.is-active {
+		pointer-events: auto;
+		display: block;
+	}
+
+	&--lg {
+		min-height: 4rem;
+		line-height: 1.4;
+		font-size: 1.4rem;
+	}
+}
+
+form {
+	input {
+		min-height: 4rem;
+		width: 100%;
+		border-radius: .4rem;
+		background-color: #fff;
+	}
+}

@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+
+	head
+		// base meta
+		meta(charset='utf-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='author', content='igorega@gmail.com')
+		meta(name='description', content='togetherNetworks test work project')
+		meta(name='keywords', content='togetherNetworks,  test work')
+
+		// disable link highlighting upon tap
+		meta(name='msapplication-tap-highlight', content='no')
+
+		// theme Color for Chrome, Firefox OS and Opera
+		meta(name='theme-color', content='#000')
+
+		// title
+		title togetherNetworks
+
+		// empty favicon
+		link(rel='icon' href='data:,')
+
+		// css
+		link(rel='stylesheet', href='css/main.css')
+
+	body
+		include ../components/header/header
+
+		main.main
+			include ../pages/form/form
+
+		// script's
+		script(src='js/main.js')

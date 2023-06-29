@@ -1,0 +1,50 @@
+.login {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 1.3rem;
+	font-family: var(--font-arial);
+	font-weight: 700;
+
+	@include media(M) {
+		flex-wrap: nowrap;
+	}
+
+	&__field {
+		position: relative;
+
+		&:not(:last-child) {
+			flex: 1 1 20rem;
+
+			@include media(M) {
+				flex: initial;
+				width: 100%;
+				max-width: 20rem;
+			}
+		}
+	}
+
+	&__input {
+		padding: 1rem 1.4rem;
+		font-size: 1.4rem;
+
+		&::placeholder {
+			color: #6e747c;
+		}
+	}
+
+	&__btn {
+		font-size: 1.3rem;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	&__link {
+		display: inline-block;
+		margin-top: 1rem;
+		color: #fff;
+		line-height: 1.2;
+		font-size: 1.1rem;
+		text-decoration: underline;
+	}
+}

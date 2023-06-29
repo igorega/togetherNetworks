@@ -1,0 +1,126 @@
+form.steps.js-steps
+
+	.steps__item
+		button.steps__btn-prev.js-step-prev(
+			type='button'
+			aria-label='Prev Step'
+			disabled
+		)
+
+	.steps__item
+
+		.steps__box
+			// step 1
+			.steps__step.js-step
+				.steps__step-info
+					p.steps__step-title Who are you?
+
+					.steps__step-dropdown
+						.steps__step-dropdown-selected.js-dropdown-btn Engineer
+
+						ul.ul.steps__step-dropdown-list.js-dropdown-list
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') Business Development Executive
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') Office Manager/PA
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') Accountant
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') VR Designer
+
+			// step 2
+			.steps__step.js-step
+				.steps__step-info
+					p.steps__step-title What is your age?
+
+					.steps__step-dropdown
+						#age.steps__step-dropdown-selected.js-dropdown-btn.js-data
+
+						ul.ul.steps__step-dropdown-list.js-dropdown-select
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 16
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 17
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 18
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 19
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 20
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 21
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 22
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 23
+							li.steps__step-dropdown-item
+								button.steps__step-dropdown-btn(type='button') 24
+
+				span.form-error.form-error--lg
+
+			// step 3
+			.steps__step.js-step
+				.steps__step-info
+					p.steps__step-title I am from
+
+					.steps__step-input
+						input#location.steps__step-input-selected.js-data(
+							type='text'
+							name='from'
+							value=''
+						)
+
+				span.form-error.form-error--lg
+
+				.steps__step-desc
+					small E.g.: New Roads or 70760
+						br
+						| We don't use postal addresses to contact members directly!
+
+			// step 4
+			.steps__step.js-step
+				.steps__step-info
+					p.steps__step-title Your email adress
+
+					.steps__step-input
+						input#email.steps__step-input-selected.js-data(
+							type='email'
+							name='email'
+							placeholder='Input your email'
+						)
+
+				span.form-error.form-error--lg
+
+			// step 5
+			.steps__step.js-step
+				.steps__step-info
+					p.steps__step-title Create your password
+
+					.steps__step-input
+						input#password.steps__step-input-selected.js-data(
+							type='password'
+							name='password'
+							value=''
+						)
+
+				span.form-error.form-error--lg
+
+				.steps__step-desc
+					small By clicking the button above you agree to our 
+						a.text-underline(href='#') Terms of Use
+						span.br
+						|  and 
+						a.text-underline(href='#') Privacy Policy
+						|  including use of cookies and to receive newsletters,
+						span.br
+						| account updates and offers sent by StarCompany.
+
+		.steps__dots
+			- for (let i = 0; i < 5; i++)
+				.steps__dot.js-step-dot
+
+	.steps__item
+		button.btn.steps__btn-next.js-step-next(
+			type='button'
+			aria-label='Next Step'
+		) Next step

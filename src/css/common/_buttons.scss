@@ -1,0 +1,16 @@
+.btn {
+	min-height: 4rem;
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: .4rem;
+	background-image: linear-gradient(61deg, rgb(88,102,234) 0%, rgb(43,160,234) 100%);
+	color: #fff;
+	font-size: 1.4rem;
+	transition: box-shadow .2s;
+
+	&:not([disabled]) {
+		&:hover {
+			box-shadow: 0rem .1rem 1.7rem 0rem rgba(43, 160, 234, 0.66);
+		}
+	}
+}

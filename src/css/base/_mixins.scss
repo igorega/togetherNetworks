@@ -1,0 +1,25 @@
+@mixin container {
+	width: 100%;
+	max-width: calc(var(--container) + var(--padding) * 2);
+	margin: 0 auto;
+	padding-left: var(--padding);
+	padding-right: var(--padding);
+}
+
+@mixin thinScroll {
+	&::-webkit-scrollbar {
+		width: .2rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #fff;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #888;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: #888;
+	}
+}

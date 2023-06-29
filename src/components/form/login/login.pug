@@ -1,0 +1,21 @@
+form.login
+	.login__field
+		input.login__input(
+			type='email'
+			name='email'
+			placeholder='Email'
+		)
+
+		span.form-error.is-active Please enter a valid email address
+
+	.login__field
+		input.login__input(
+			type='password'
+			name='password'
+			placeholder='Password'
+		)
+
+		a.login__link(href='#') Forgot your password?
+
+	.login__field
+		button.btn.login__btn(type='submit') Log in

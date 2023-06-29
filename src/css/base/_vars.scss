@@ -1,0 +1,14 @@
+:root {
+	// fonts
+	--font-arial: 'Arial', sans-serif;
+	--font-openSans: 'OpenSans', sans-serif;
+	--font-proximaNova: 'ProximaNova', sans-serif;
+
+	// common
+	--container: 96rem;
+
+	--padding: 1.6rem;
+	@include media(M) {
+		--padding: 4rem;
+	}
+}

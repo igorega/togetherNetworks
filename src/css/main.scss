@@ -1,0 +1,23 @@
+@import 'base/fonts';
+
+@import 'reset';
+
+// base
+@import 'base/media';
+@import 'base/vars';
+@import 'base/mixins';
+@import 'base/base';
+
+// common
+@import 'common/styles';
+@import 'common/buttons';
+@import 'common/form';
+
+// components
+@import '../components/header/header';
+// @import '../components/footer/footer';
+@import '../components/form/login/login';
+@import '../components/form/steps/steps';
+
+// pages
+@import '../pages/form/form';
