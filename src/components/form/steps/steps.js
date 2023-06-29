@@ -104,7 +104,7 @@ nextStepButton.addEventListener('click', () => {
 
 		nextStepButton.disabled = true;
 
-		getRes('http://www.mocky.io/v2/5dfcef48310000ee0ed2c281')
+		getRes('https://www.mocky.io/v2/5dfcef48310000ee0ed2c281')
 			.then(data => {
 
 				Object.keys(data.errors).forEach(item => {
