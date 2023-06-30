@@ -1,4 +1,5 @@
-const emailReg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+import { validationCondition } from './validation';
+
 const steps = document.querySelector('.js-steps');
 const step = document.querySelectorAll('.js-step');
 const stepDot = document.querySelectorAll('.js-step-dot');
@@ -12,13 +13,6 @@ const lastStepClass = 'is-last';
 const titleButtonStep = 'Next step';
 const titleButtonStepLast = 'Start now';
 let index = 0;
-
-
-const getRes = async (url) => {
-	const res = await fetch(url);
-
-	return await res.json();
-};
 
 const showSteps = (index) => {
 	step.forEach(item => {
@@ -88,19 +82,15 @@ const prevStep = () => {
 	toggleButtonActivity();
 };
 
+const getRes = async (url) => {
+	const res = await fetch(url);
+
+	return await res.json();
+};
+
 nextStepButton.addEventListener('click', () => {
-	const age = document.querySelector('#age');
-	const locat = document.querySelector('#location');
-	const email = document.querySelector('#email');
-	const password = document.querySelector('#password');
 
-	const ageValidation = age.textContent === '' && age.closest('.js-step').classList.contains('is-show');
-	const locationValidation = locat.value === '' && locat.closest('.js-step').classList.contains('is-show');
-	const emailValidation = email.value === '' && email.closest('.js-step').classList.contains('is-show') ||
-				!emailReg.test(email.value) && email.closest('.js-step').classList.contains('is-show');
-	const passwordValidation = password.value === '' && password.closest('.js-step').classList.contains('is-show');
-
-	if (ageValidation || locationValidation || emailValidation || passwordValidation) {
+	if (validationCondition()) {
 
 		nextStepButton.disabled = true;
 
@@ -127,7 +117,7 @@ nextStepButton.addEventListener('click', () => {
 						});
 
 						id.addEventListener('input', () => {
-							if (!ageValidation || !locationValidation || !emailValidation || !passwordValidation) {
+							if (!validationCondition()) {
 								removeErrorActivateButton();
 							}
 						});
